@@ -11,10 +11,11 @@ html {
 }
 body {
     height: 100%;
+    overflow: hidden;
 }
 
 /*music*/
-#music {
+.music {
     position: fixed;
     top: 3vh;
     right: 4vw;
@@ -26,14 +27,14 @@ body {
     background: #fff;
 }
 
-#music > img:first-of-type {
+.music > img:first-of-type {
     position: absolute;
     top: 24%;
     right: 2.5%;
     width: 28.421%;
     z-index: 1;
 }
-#music > img:last-of-type {
+.music > img:last-of-type {
     position: absolute;
     top: 0;
     right: 0;
@@ -43,7 +44,7 @@ body {
     width: 79%;
     z-index: 0;
 }
-#music > img.play {
+.music > img.play {
     -webkit-animation:music_disc 4s linear infinite;
             animation:music_disc 4s linear infinite;
 }
@@ -73,7 +74,7 @@ body {
 }
 /*page1*/
 #page1 {
-    display: none;
+    display: block;
 }
 #page1 > .bg {
     background: url("../images/p1_bg.jpg") no-repeat center center;
@@ -90,6 +91,7 @@ body {
     width: 45vw;
     height: 71.2vh;
     font-size: 3.506rem;
+    color: #FFF;
     padding-top: 31vh;
     text-align: center;
     -webkit-box-sizing: border-box;
@@ -159,6 +161,19 @@ body {
 /*page2*/
 #page2 {
     display: none;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+#page2.fadeOut {
+    opacity: .3;
+    -webkit-transform: translate(0,-100%);
+    -moz-transform: translate(0,-100%);
+    -ms-transform: translate(0,-100%);
+    -o-transform: translate(0,-100%);
+    transform: translate(0,-100%);
 }
 #page2 > .bg {
     background: url("../images/p2_bg.jpg") no-repeat center center;
@@ -282,7 +297,19 @@ body {
 
 /*page3*/
 #page3 {
-    display: block;
+    display: none;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition:.5s;
+    transition: .5s;
+}
+#page3.fadeIn {
+    -webkit-transform: translate(0,-100%);
+    -moz-transform: translate(0,-100%);
+    -ms-transform: translate(0,-100%);
+    -o-transform: translate(0,-100%);
+    transform: translate(0,-100%);
 }
 #page3 > .bg {
     background: url("../images/p3_bg.jpg") no-repeat center center;
