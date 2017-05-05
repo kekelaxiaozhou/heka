@@ -31,6 +31,7 @@ body {
     top: 24%;
     right: 2.5%;
     width: 28.421%;
+    z-index: 1;
 }
 #music > img:last-of-type {
     position: absolute;
@@ -40,7 +41,23 @@ body {
     left: 0;
     margin: auto;
     width: 79%;
+    z-index: 0;
 }
+#music > img.play {
+    -webkit-animation:music_disc 4s linear infinite;
+            animation:music_disc 4s linear infinite;
+}
+@keyframes music_disc {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
 /*page bg*/
 .page {
     position: absolute;
@@ -100,6 +117,23 @@ body {
     -moz-box-shadow: 0 0 10vw 10vw #d60b3b;
     -ms-box-shadow: 0 0 10vw 10vw #d60b3b;
     -o-box-shadow: 0 0 10vw 10vw #d60b3b;
+    /*红灯笼动画*/
+    -webkit-animation:p1_lantern .8s infinite alternate;
+    -o-animation:p1_lantern .8s infinite alternate;
+    animation:p1_lantern .8s infinite alternate;
+}
+@keyframes p1_lantern {
+    0% {
+        opacity: .5;
+        -webkit-transform: scale(.8, .8);
+        -moz-transform: scale(.8, .8);
+        -ms-transform: scale(.8, .8);
+        -o-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+    100% {
+        opacity: 1;
+    }
 }
 #page1 > .p1_imooc {
     position: absolute;
@@ -121,6 +155,7 @@ body {
     text-align: center;
     color: #231815;
 }
+
 /*page2*/
 #page2 {
     display: none;
@@ -140,6 +175,10 @@ body {
     background-size: 100%;
     width: 59.375vw;
     height: 59.375vh;
+    /*最大的圈动画*/
+    -webkit-animation: p2_circle_outer 1s linear 3s infinite;
+    -o-animation: p2_circle_outer 1s linear 3s infinite;
+    animation: p2_circle_outer 1s linear 3s infinite;
 }
 #page2 > .p2_circle:before {
     position: absolute;
@@ -153,6 +192,10 @@ body {
     background-size: 100%;
     width: 45.625vw;
     height: 45.625vh;
+    /*中间的圈动画*/
+    -webkit-animation: p2_circle_middle 1s linear 2s infinite;
+    -o-animation: p2_circle_middle 1s linear 2s infinite;
+    animation: p2_circle_middle 1s linear 2s infinite;
 }
 #page2 > .p2_circle:after {
      position: absolute;
@@ -166,7 +209,62 @@ body {
      background-size: 100%;
      width: 39.9375vw;
      height: 39.9375vh;
- }
+    /*最小的圈动画*/
+    -webkit-animation: p2_circle_inner 1s linear 1s infinite;
+    -o-animation: p2_circle_inner 1s linear 1s infinite;
+    animation: p2_circle_inner 1s linear 1s infinite;
+}
+@keyframes p2_circle_outer {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes p2_circle_middle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-720deg);
+        -moz-transform: rotate(-720deg);
+        -ms-transform: rotate(-720deg);
+        -o-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes p2_circle_inner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-1080deg);
+        -moz-transform: rotate(-1080deg);
+        -ms-transform: rotate(-1080deg);
+        -o-transform: rotate(-1080deg);
+        transform: rotate(-1080deg);
+    }
+}
+
 #page2 > .p2_2016 {
     position: absolute;
     top: 0;
@@ -241,4 +339,23 @@ body {
     border-radius: 50%;
     background: url("../images/p3_blessing.png") no-repeat center center;
     background-size: 100%;
+    -webkit-animation: p3_blessing 2s linear infinite;
+    -o-animation: p3_blessing 2s linear infinite;
+    animation: p3_blessing 2s linear infinite;
+}
+@keyframes p3_blessing {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
