@@ -175,6 +175,22 @@ body {
     -o-transform: translate(0,-100%);
     transform: translate(0,-100%);
 }
+#page2 > .p2_bg_loading {
+    z-index: 4;
+    background: #ef1639;
+    -webkit-animation: p2_bg_loading 2s linear forwards;
+    -o-animation: p2_bg_loading 2s linear forwards;
+    animation: p2_bg_loading 2s linear forwards;
+}
+@keyframes p2_bg_loading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 #page2 > .bg {
     background: url("../images/p2_bg.jpg") no-repeat center center;
     background-size: 100%;
